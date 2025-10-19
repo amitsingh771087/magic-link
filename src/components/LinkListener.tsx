@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import { Alert, Linking } from 'react-native';
 import { getSavedEmail, removeSavedEmail } from '../auth/rememberEmail';
@@ -33,16 +32,19 @@ export default function LinkListener() {
             }
         };
 
-        // Cold start: when app is opened via link
+        // Cold start: app opened via link
         Linking.getInitialURL().then((url) => handleLink(url));
 
-        // Warm start: when app is already open
-        const sub = Linking.addEventListener('url', ({ url }) => handleLink(url));
+        // Warm start: app is already open
+        const subscription = Linking.addEventListener('url', (event) => {
+            handleLink(event.url);
+        });
 
+        // Clean up listener on unmount
         return () => {
-            sub.remove();
+            subscription.remove();
         };
     }, []);
 
-    return null; // No UI — runs silently in background
+    return null;
 }

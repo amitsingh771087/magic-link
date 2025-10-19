@@ -23,6 +23,7 @@
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
       "googleServicesFile": "./google-services.json",
+      "versionCode": 2,
       "package": "com.amitsingh06.Magic"
     },
     "web": {
@@ -57,10 +58,15 @@
       "@react-native-firebase/crashlytics",
       "expo-secure-store"
     ],
-
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "9e8cdf8a-c4e2-4719-b01c-4d84cbde8e0a"
+      }
     }
   }
 }

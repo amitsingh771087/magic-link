@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.amitsingh06.Magic",
+      "sha256_cert_fingerprints": [
+        "8F:43:A3:08:1C:48:F1:17:85:CB:0E:49:FA:7B:F2:64:EA:87:19:DC:31:71:BA:D3:3E:7E:E0:9C:72:99:7F:B7"
+      ]
+    }
+  }
+]
